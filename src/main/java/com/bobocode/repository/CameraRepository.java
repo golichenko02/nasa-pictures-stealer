@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface CameraRepository extends JpaRepository<Camera, Long> {
 
   @Query("""
-      select distinct c
+      select c
       from com.bobocode.model.entity.Camera c
       left join fetch c.pictures
       where c.nasaId = :nasaId
