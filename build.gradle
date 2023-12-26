@@ -24,10 +24,17 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.5.Final'
+    compileOnly group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.5.5.Final'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.2.0'
+    implementation group: 'org.flywaydb', name: 'flyway-core', version: '10.2.0'
+    runtimeOnly group: 'org.flywaydb', name: 'flyway-database-postgresql', version: '10.2.0'
     compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'org.postgresql:postgresql'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.1'
     annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.5.5.Final'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 tasks.named('test') {

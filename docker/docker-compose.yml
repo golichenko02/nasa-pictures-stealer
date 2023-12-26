@@ -18,7 +18,7 @@ services:
     image: bitnami/java:17-debian-11
     container_name: nasa-pictures-stealer
     environment:
-      DB_URL: jdbc:postgresql://localhost:5432/nasa_pictures
+      DB_URL: jdbc:postgresql://postgres:5432/nasa_pictures
       DB_USERNAME: root
       DB_PASSWORD: root
       NASA_API_KEY: 9D53SLTqTGN8gnIvgbgcADsmekKq1bL0zyhWzs8R
