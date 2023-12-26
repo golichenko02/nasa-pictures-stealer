@@ -1,7 +1,7 @@
-package com.bobocode.model;
+package com.bobocode.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public record PictureDto(Long id, @JsonProperty("img_src") String imgSrc, CameraDto camera) {
+public record PictureDto(@JsonProperty("id") Long nasaId, @JsonProperty("img_src") String imgSrc, CameraDto camera) {
 
 }

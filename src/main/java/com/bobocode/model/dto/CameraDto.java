@@ -1,5 +1,7 @@
-package com.bobocode.model;
+package com.bobocode.model.dto;
 
-public record CameraDto(Long id, String name ) {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record CameraDto(@JsonProperty("id") Long nasaId, String name) {
 
 }
